@@ -1,11 +1,114 @@
 .bg_color {
   background-color: #222D32;
 }
+
 .mt_150 {
   margin-top: 150px;
 }
+
 .panel-title {
   height: 40px;
   line-height: 40px;
   font-size: 18px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+red {
+  color:#A94442;
+}
+
+
+/*侧边导航栏  固定定位*/
+.lt_aside{
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.lt_aside a{
+  color: #fff;
+}
+.lt_aside .title {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 25px;
+  background-color: #367FA9;
+}
+.lt_aside .userpic {
+  height: 180px;
+  padding-top: 30px;
+  color: #fff;
+}
+.lt_aside .userpic img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.lt_aside .userpic p {
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  text-align: center;
+}
+.lt_aside .sidenav a{
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 40px;
+  border-left: 3px solid transparent;
+}
+.lt_aside .sidenav a.current {
+  background-color: #1D1F21;
+  border-left: 3px solid #069;
+}
+
+/*乐淘主体*/
+.lt_main{
+  height:1000px;
+  background-color: pink;
+  padding-left: 180px;
+  padding-top: 70px;
+}
+
+/*乐淘主体头部  固定定位*/
+.lt_main .topbar {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  padding-right: 180px;
+  background-color: #367FA9;
+}
+.lt_main .topbar .menu,
+.lt_main .topbar .logout {
+  color: #fff;
+  width: 50px;   /*a浮动脱标,可直接设宽高*/
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
 }
