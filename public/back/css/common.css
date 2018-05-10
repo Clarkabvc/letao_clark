@@ -32,7 +32,7 @@ a:active {
 ul, ol {
   list-style: none;
 }
-red {
+.red {
   color:#A94442;
 }
 
@@ -45,6 +45,10 @@ red {
   position: fixed;
   top: 0;
   left: 0;
+  transition: left 1s;
+}
+.lt_aside.hidemenu {
+  left:-180px;
 }
 .lt_aside a{
   color: #fff;
@@ -81,6 +85,9 @@ red {
   padding-left: 40px;
   border-left: 3px solid transparent;
 }
+.lt_aside .sidenav .child a{
+  padding-left: 60px;
+}
 .lt_aside .sidenav a.current {
   background-color: #1D1F21;
   border-left: 3px solid #069;
@@ -92,6 +99,10 @@ red {
   background-color: pink;
   padding-left: 180px;
   padding-top: 70px;
+  transition: all 1s;
+}
+.lt_main.hidemenu {
+  padding-left: 0px;
 }
 
 /*乐淘主体头部  固定定位*/
@@ -102,6 +113,10 @@ red {
   width: 100%;
   padding-right: 180px;
   background-color: #367FA9;
+  transition: all 1s;
+}
+.topbar.hidemenu {
+  padding-right: 0px;
 }
 .lt_main .topbar .menu,
 .lt_main .topbar .logout {
