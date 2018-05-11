@@ -21,7 +21,7 @@
   <div class="sidenav">
     <ul>
       <li>
-        <a href="user.html"  class="current">
+        <a href="user.html" class="current">
           <i class="glyphicon glyphicon-user"></i>
           <span>用户管理</span>
         </a>
@@ -62,6 +62,29 @@
       <li><a href="#">管理系统</a></li>
       <li class="active">用户管理</li>
     </ol>
+    <div class="lt_content">
+      <!--用户数据表格-->
+      <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+          <th width="10%">序号</th>
+          <th width="20%">用户名</th>
+          <th width="30%">手机号</th>
+          <th width="20%">状态</th>
+          <th width="20%">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!--挖坑-->
+        </tbody>
+      
+      </table>
+      
+      <!--分页导航-->
+      <div class="text-right">
+        <ul id="paginator"></ul>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -71,11 +94,11 @@
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
         <h4 class="modal-title">温馨提示</h4>
       </div>
       <div class="modal-body">
-        <p class="red"> <i class="glyphicon glyphicon-info-sign"></i> 您确定要退出后台管理系统吗？</p>
+        <p class="red"><i class="glyphicon glyphicon-info-sign"></i> 您确定要退出后台管理系统吗？</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -85,11 +108,34 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!--用户数据模板-->
+<script type="text/html" id="tmp">
+  {{ each rows v i }}
+  <tr>
+    <td>{{ i+1 + (page-1)*size }}</td>
+    <td>{{ v.username }}</td>
+    <td>{{ v.mobile }}</td>
+    <td>{{ v.isDelete == 1? "正常" : "禁用"}}</td>
+    <td data-id='{{ v.id }}'>
+      {{if v.isDelete == 1 }}
+      <button class="btn btn-danger">禁用</button>
+      {{ /if }}
+      
+      {{ if v.isDelete == 0 }}
+      <button class="btn btn-success">启用</button>
+      {{ /if }}
+    </td>
+  </tr>
+  {{ /each }}
+</script>
 
 </body>
 </html>
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
 <script src="js/common.js"></script>
+<script src="js/user.js"></script>
