@@ -121,6 +121,7 @@ ul, ol {
   padding-right: 180px;
   background-color: #367FA9;
   transition: all 1s;
+  z-index: 99;
 }
 .topbar.hidemenu {
   padding-right: 0px;
