@@ -1,0 +1,45 @@
+/*左侧导航*/
+.aside {
+  height: 100%;
+  width: 90px;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+.aside li{
+  
+}
+.aside li a {
+  color: #666;
+  background-color: #e3e4e5;
+  display: block;
+  width: 90px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.aside li a.current{
+  border: none;
+  background-color: #fff;
+}
+
+/*主体展示区域*/
+.content {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+}
+.content li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  padding: 5px;
+}
+.content li img {
+  width: 70px;
+  height: 50px;
+  margin: 0 auto;
+}
