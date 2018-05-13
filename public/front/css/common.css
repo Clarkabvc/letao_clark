@@ -7,15 +7,21 @@ html,body {
   margin: 0;
   list-style: none;
 }
+img {
+  width: 100%;
+  display: block;
+}
+
 .lt_container{
   width: 100%;
   height: 100%;
   max-width: 640px;
   min-width: 320px;
-  background-color: pink;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  padding-top: 45px;
+  padding-bottom: 55px;
 }
 .lt_header {
   height: 45px;
@@ -52,6 +58,12 @@ html,body {
   right: 0;
 }
 
+.lt_main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
 
 .lt_footer {
   position: absolute;
@@ -61,6 +73,7 @@ html,body {
   width: 100%;
   background-color: #069;
   overflow: hidden;
+  z-index: 666;
 }
 .lt_footer li {
   width: 25%;
