@@ -13,7 +13,7 @@
 <body>
 <div class="lt_container">
   <div class="lt_header">
-    <a href="index.html" class="t_left">
+    <a href="javascript:history.go(-1);" class="t_left">
       <i class="mui-icon mui-icon-back"></i>
     </a>
     <h3>搜索中心</h3>
@@ -87,7 +87,7 @@
     <ul>
       {{ each list v i }}
       <li class="mui-clearfix">
-        <a href="searchlist.html?key={{ v }}" class="mui-pull-left">{{ v }}</a>
+        <a href="searchlist.html?key={{ v }}" class="mui-pull-left search_key">{{ v }}</a>
         <i data-index="{{ i }}" class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></i>
       </li>
       {{ /each }}

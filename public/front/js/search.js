@@ -45,7 +45,14 @@ $(function () {
     })
   });
   
-  //4-添加一条搜索记录
+  //4-点击搜索文本,跳转到搜索页,并刷新搜索历史
+  $('.history').on('click','.search_key',function () {
+    //获取点击的搜索关键词
+    var key = $(this).text();
+    addSearch( key );
+  });
+  
+  //5-添加一条搜索记录
 $('.search button').click(function () {
   //获取输入的关键字
   var key = $('.search input').val().trim();
@@ -53,27 +60,7 @@ $('.search button').click(function () {
     mui.toast("请输入要搜索的关键字");
     return;
   }
-  
-  //获取数组
-  var arr = getHistory();
-  //a.如果有重复项,删掉之前的
-  var  index = arr.indexOf(key);
-  if(index > -1 ){
-    arr.splice(index,1);
-  }
-  //b.历史记录长度不能大于10
-  if(arr.length >= 10){
-    arr.pop();
-  }
-  
-  //添加到数组最前面
-  arr.unshift( key );
-  
-  //同步数组到本地存储
-  localStorage.setItem('search_list', JSON.stringify( arr ));
-  
-  //重新渲染搜索记录
-  render();
+  addSearch( key );
   
   //清空搜索框
   $('.search input').val('');
@@ -81,7 +68,31 @@ $('.search button').click(function () {
   //跳转到搜索列表页
   location.href = "searchlist.html?key=" + key;
   
-})
   
+});
+  
+  //封装一个添加搜索记录的方法
+  function addSearch( key ) {
+    //获取数组
+    var arr = getHistory();
+    //a.如果有重复项,删掉之前的
+    var  index = arr.indexOf(key);
+    if(index > -1 ){
+      arr.splice(index,1);
+    }
+    //b.历史记录长度不能大于10
+    if(arr.length >= 10){
+      arr.pop();
+    }
+  
+    //添加到数组最前面
+    arr.unshift( key );
+  
+    //同步数组到本地存储
+    localStorage.setItem('search_list', JSON.stringify( arr ));
+  
+    //重新渲染搜索记录
+    render();
+  }
   
 });
