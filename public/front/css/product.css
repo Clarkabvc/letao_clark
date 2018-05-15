@@ -1,0 +1,30 @@
+.items {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+lt_main .proname {
+
+}
+.oldprice {
+  font-size: 12px;
+  text-decoration: line-through;
+}
+.prosize span{
+  display: inline-block;
+  padding: 0 3px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.prosize span.current {
+  background-color: #d9b81c;
+  color: #fff;
+}
+.lt_footer {
+  background-color: #EFEFF4;
+  padding: 10px 10px 0;
+}
+.lt_footer .gocart {
+  padding: 5px;
+}

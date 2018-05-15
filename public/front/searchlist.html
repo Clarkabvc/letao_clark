@@ -78,9 +78,6 @@
 
 <!--商品展示模板-->
 <script type="text/html" id="productTmp">
-  {{ if data.length === 0 }}
-  <p class="red">抱歉,没有您要找的商品!</p>
-  {{ else }}
   <ul class="mui-clearfix">
     {{ each data v i }}
     <li><a href="javascript:;">
@@ -94,7 +91,6 @@
     </a></li>
     {{ /each }}
   </ul>
-  {{ /if }}
 </script>
 
 </body>
