@@ -80,7 +80,7 @@
 <script type="text/html" id="productTmp">
   <ul class="mui-clearfix">
     {{ each data v i }}
-    <li><a href="javascript:;">
+    <li><a href="product.html?productId={{ v.id }}">
       <img src="{{ v.pic[0].picAddr }}" alt="">
       <p class="mui-ellipsis-2">{{ v.proName }} </p>
       <p>
