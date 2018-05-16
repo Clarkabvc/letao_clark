@@ -1,0 +1,53 @@
+.lt_main li {
+  height: 110px;
+  padding: 10px 15px;
+}
+.mui-table-cell {
+  display: block;
+}
+.imgbox {
+  float: left;
+  width: 60px;
+  height: 100%;
+}
+.imgbox img{
+  width: 60px;
+  height: 60px;
+}
+.infobox {
+  height: 100%;
+  overflow: hidden;
+  padding-left: 10px;
+}
+.infobox .intop {
+  color: #333;
+  height: 42px;
+  margin-bottom: 5px;
+}
+.infobox .oldprice{
+  font-size: 12px;
+}
+
+.lt_total {
+  height: 30px;
+  width: 100%;
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  z-index: 66;
+  padding-left: 10px;
+  line-height: 30px;
+  background-color: #eee;
+}
+.lt_total span{
+  font-size: 12px;
+  font-weight: 700;
+}
+.lt_total a {
+  display: block;
+  height: 100%;
+  padding: 0 15px;
+  font-size: 12px;
+  background-color: #f00;
+  color: #fff;
+}
