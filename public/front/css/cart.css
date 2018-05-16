@@ -39,7 +39,7 @@
   line-height: 30px;
   background-color: #eee;
 }
-.lt_total span{
+.lt_total .red{
   font-size: 12px;
   font-weight: 700;
 }
@@ -49,5 +49,17 @@
   padding: 0 15px;
   font-size: 12px;
   background-color: #f00;
+  color: #fff;
+}
+
+/*模态框部分*/
+.productSize span {
+  padding: 2px 3px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  font-size: 12px;
+}
+.productSize span.current {
+  background-color: #d9b81c;
   color: #fff;
 }
